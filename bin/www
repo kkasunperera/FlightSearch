@@ -36,8 +36,8 @@ server.on('listening', onListening);
  * Start chrome
  */
 
-var childProcess = require('child_process'); 
-childProcess.exec('start chrome http://localhost:3000');
+//var childProcess = require('child_process'); 
+//childProcess.exec('start chrome http://localhost:3000');
 /**
  * Normalize a port into a number, string, or false.
  */
