@@ -1,0 +1,114 @@
+script(src="http://code.jquery.com/jquery-1.9.1.js")
+script(src="/javascripts/main.js")
+link(rel='stylesheet', href='/stylesheets/style.css')    
+link(rel='stylesheet', href="http://www.w3schools.com/lib/w3.css")
+
+block content
+    h1 Welcome to Flight Search
+    form(name="input")
+        | From location:
+        input(type="text", name="from_location")
+        br
+        | To location:
+        input(type="text", name="to_location")
+        br
+        | Date:
+        input(type="text", name="date")
+        br
+        input(type="submit", value="Submit",id="mySubmit")
+     
+    
+    ul(id = "tabbar",class = "tab", style="display:none").w3-navbar.w3-blue
+      li
+        a(href='#', id="tab1",onclick="openCity('day_1')")
+      |   
+      li
+        a(href='#', id="tab2",onclick="openCity('day_2')")
+      |   
+      li
+        a(href='#', id="tab3",onclick="openCity('day_3')")
+      |   
+      li
+        a(href='#', id="tab4", onclick="openCity('day_4')")
+      |   
+      li
+        a(href='#', id="tab5",onclick="openCity('day_5')")
+    #day_1.w3-container.city
+        h4#day1
+        br
+        table(id="tableday1", border='1',style="display:none",class="table table-striped")
+          thead
+            tr
+              th Id
+              th Airline
+              th Start
+              th Finish
+              th Duration
+              th Price
+          tbody
+    #day_2.w3-container.city
+        h4#day2
+        br
+        table(id="tableday2",border='1',style="display:none",class="table table-striped")
+          thead
+            tr
+              th Id
+              th Airline
+              th Start
+              th Finish
+              th Duration
+              th Price
+          tbody
+    #day_3.w3-container.city
+        h4#day3
+        br
+        table(id="tableday3",border='1',style="display:none",class="table table-striped")
+          thead
+            tr
+              th Id
+              th Airline
+              th Start
+              th Finish
+              th Duration
+              th Price
+          tbody
+    #day_4.w3-container.city
+        h4#day4
+        br
+        table(id="tableday4",border='1',style="display:none",class="table table-striped")
+          thead
+            tr
+              th Id
+              th Airline
+              th Start
+              th Finish
+              th Duration
+              th Price
+          tbody
+    #day_5.w3-container.city
+        h4#day5
+        br
+        table(id="tableday5",border='1',style="display:none",class="table table-striped")
+          thead
+            tr
+              th Id
+              th Airline
+              th Start
+              th Finish
+              th Duration
+              th Price
+          tbody
+    script.
+      openCity("day_1")
+      function openCity(cityName) {
+      var i;
+      var x = document.getElementsByClassName("city");
+      for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+      }
+      document.getElementById(cityName).style.display = "block";
+      }
+   
+
+
+
